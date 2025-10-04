@@ -127,7 +127,7 @@
     {
       "question": "Quel est le résultat de l’expression (2 >= 10) ?",
       "options": ["true", "false", "1", "0"],
-      "answer": 1
+      "answer": 3
     },
     {
       "question": "Quelle est la syntaxe correcte de l’opérateur ternaire en C ?",
