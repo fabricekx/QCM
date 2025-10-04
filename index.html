@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>QCM Étudiants</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>QCM Aléatoire</h1>
+
+      <label id="label" for="theme">Choisir un thème :</label>
+      <select id="themeSelect">
+        <option value="">Select:</option>
+        <option value="base_c">Bases du language C</option>
+        <!-- <option value="maths">Maths</option> -->
+        <!-- <option value="histoire">Histoire</option> -->
+      </select>
+      <button id="start">Commencer</button>
+
+      <div id="qcm" style="display: none"></div>
+      <div style="text-align: center;">
+      <button id="next" style="display: none ">Suivant</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

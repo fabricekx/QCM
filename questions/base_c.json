@@ -1,0 +1,143 @@
+ [
+    {
+      "question": "Quel mot-clé permet de déclarer une variable entière en C ?",
+      "options": ["int", "integer", "num", "entier"],
+      "answer": 0
+    },
+    {
+      "question": "Quelle est la bonne syntaxe pour afficher 'Hello World' en C ?",
+      "options": ["echo('Hello World');", "printf('Hello World');", "printf(\"Hello World\");", "print(\"Hello World\");"],
+      "answer": 2
+    },
+    {
+      "question": "Quelle fonction permet de lire une valeur saisie par l'utilisateur ?",
+      "options": ["read()", "scanf()", "input()", "gets()"],
+      "answer": 1
+    },
+    {
+      "question": "Quelle est la valeur par défaut d'une variable locale non initialisée en C ?",
+      "options": ["0", "1", "Aléatoire (indéfinie)", "NULL"],
+      "answer": 2
+    },
+    {
+      "question": "Quel est le bon format pour lire un entier avec scanf ?",
+      "options": ["%s", "%c", "%d", "%f"],
+      "answer": 2
+    },
+    {
+      "question": "Quelle est la bonne déclaration d'une variable flottante en C ?",
+      "options": ["float x;", "decimal x;", "real x;", "double x;"],
+      "answer": 0
+    },
+    {
+      "question": "Quelle boucle est garantie d'exécuter son contenu au moins une fois ?",
+      "options": ["for", "while", "do...while", "foreach"],
+      "answer": 2
+    },
+    {
+      "question": "Quelle est la bonne syntaxe d'une condition if en C ?",
+      "options": ["if condition {}", "if (condition) {}", "if {condition}", "if [condition] then"],
+      "answer": 1
+    },
+    {
+      "question": "Quelle est la différence entre '=' et '==' en C ?",
+      "options": ["Aucune", "'=' compare, '==' affecte", "'=' affecte, '==' compare", "Les deux comparent"],
+      "answer": 2
+    },
+    {
+      "question": "Quelle est la portée d'une variable déclarée à l'intérieur d'une fonction ?",
+      "options": ["Globale", "Locale à la fonction", "Accessible partout", "Static"],
+      "answer": 1
+    },
+    {
+      "question": "Quelle est la valeur de x après ce code : int x = 5; x += 3; ?",
+      "options": ["5", "3", "8", "53"],
+      "answer": 2
+    },
+    {
+      "question": "Quel type utiliser pour stocker un caractère ?",
+      "options": ["string", "char", "character", "text"],
+      "answer": 1
+    },
+    {
+      "question": "Comment écrire une boucle qui affiche les nombres de 1 à 10 ?",
+      "options": [
+        "for (i=1; i<=10; i++) printf(i);",
+        "for (int i=1; i<=10; i++) printf(\"%d\", i);",
+        "for (i=0; i<10; i++) printf(\"%d\", i);",
+        "while (i<=10) print(i);"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Quelle est la valeur de y après ce code : int y = 10 % 3; ?",
+      "options": ["3", "1", "0", "10"],
+      "answer": 1
+    },
+    {
+      "question": "Quelle instruction permet de sortir d'une boucle immédiatement ?",
+      "options": ["stop", "end", "break", "exit"],
+      "answer": 2
+    },
+    {
+      "question": "Quelle instruction permet de passer directement à l’itération suivante d’une boucle ?",
+      "options": ["skip", "next", "continue", "goto"],
+      "answer": 2
+    },
+    {
+      "question": "Quel est le résultat de : int a=2; int b=3; printf(\"%d\", a==b); ?",
+      "options": ["2", "3", "0", "1"],
+      "answer": 2
+    },
+    {
+      "question": "Quelle est la syntaxe correcte d’un switch en C ?",
+      "options": [
+        "switch(x) { if case 1: ... }",
+        "switch(x) { case 1: ... break; }",
+        "switch x { case 1 => ... }",
+        "switch(x): case 1 { ... }"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "Quel est le bon format pour afficher un flottant avec printf ?",
+      "options": ["%d", "%s", "%f", "%c"],
+      "answer": 2
+    },
+    {
+      "question": "Quelle est la taille (en octets) d’un int sur la plupart des systèmes modernes (32/64 bits) ?",
+      "options": ["2", "4", "8", "Dépend uniquement du compilateur"],
+      "answer": 1
+    },
+    {
+      "question": "Quel est le résultat de l’expression (5 > 3) ?",
+      "options": ["true", "false", "1", "0"],
+      "answer": 2
+    },
+    {
+      "question": "Que retourne l’expression (4 != 4) ?",
+      "options": ["true", "false", "1", "0"],
+      "answer": 3
+    },
+    {
+      "question": "Quel est le résultat de l’expression (7 <= 7) ?",
+      "options": ["true", "false", "0", "1"],
+      "answer": 3
+    },
+    {
+      "question": "Quel est le résultat de l’expression (2 >= 10) ?",
+      "options": ["true", "false", "1", "0"],
+      "answer": 1
+    },
+    {
+      "question": "Quelle est la syntaxe correcte de l’opérateur ternaire en C ?",
+      "options": [
+        "condition ? valeur_si_vrai : valeur_si_faux",
+        "if (condition) then valeur1 else valeur2",
+        "condition ? valeur1, valeur2",
+        "condition : valeur1 ? valeur2"
+      ],
+      "answer": 0
+    }
+  ]
+
