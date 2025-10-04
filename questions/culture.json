@@ -1,12 +1,12 @@
 [
   {
-    "q": "Quelle est la capitale de la France ?",
-    "reponses": ["Paris", "Lyon", "Marseille", "Bordeaux"],
-    "bonne": 0
+    "question": "Quelle est la capitale de la France ?",
+    "options": ["Paris", "Lyon", "Marseille", "Bordeaux"],
+    "answer": 0
   },
   {
-    "q": "Qui a écrit 'Le Petit Prince' ?",
-    "reponses": ["Victor Hugo", "Molière", "Saint-Exupéry", "Zola"],
-    "bonne": 2
+    "question": "Qui a écrit 'Le Petit Prince' ?",
+    "options": ["Victor Hugo", "Molière", "Saint-Exupéry", "Zola"],
+    "answer": 2
   }
 ]

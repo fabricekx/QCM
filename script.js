@@ -20,8 +20,8 @@ function shuffleArray(array) {
 // Affiche la question courante avec radio buttons
 function showQuestion() {
   if (currentQuestionIndex >= questions.length) {
-    qcmDiv.innerHTML = `<h2>Quiz terminé !</h2><p>Score : ${score}/${questions.length}</p>`;
-    nextBtn.style.display = "none";
+     showResults(); // délègue l'affichage à la fonction dédiée
+
     return;
   }
 
@@ -44,19 +44,31 @@ function showQuestion() {
 }
 
 // Vérifie la réponse et passe à la suivante
+let wrongAnswers = []; // stockage des mauvaises réponses
+
 nextBtn.addEventListener("click", () => {
   const selected = document.querySelector('input[name="answer"]:checked');
   if (!selected) {
     alert("Veuillez sélectionner une réponse !");
     return;
   }
-
-  if (parseInt(selected.value) === questions[currentQuestionIndex].answer) {
+let answer = parseInt(selected.value);
+  if (answer === questions[currentQuestionIndex].answer) {
     score++;
   }
+  else { wrongAnswers.push({
+            question: questions[currentQuestionIndex].question,
+            yourAnswer: questions[currentQuestionIndex].options[answer],
+    correctAnswer: questions[currentQuestionIndex].options[questions[currentQuestionIndex].answer]
+        });
+   }
 
   currentQuestionIndex++;
-  showQuestion();
+  if (currentQuestionIndex < questions.length) {
+        showQuestion();
+    } else {
+        showResults();
+    }
 });
 
 // Démarrer le quiz
@@ -66,7 +78,7 @@ startBtn.addEventListener("click", async () => {
     alert("Choisissez un thème !");
     return;
   }
-
+// console.log("Theme choisi " + theme);
   try {
     const response = await fetch(`questions/${theme}.json`);
     questions = await response.json();
@@ -89,3 +101,24 @@ startBtn.addEventListener("click", async () => {
     alert("Impossible de charger le fichier de questions !");
   }
 });
+
+function showResults() {
+    qcmDiv.innerHTML = `<h2>Test terminé !</h2><p>Score : ${score}/${questions.length}</p><br><h3 id="appel"> Appel Fabrice pour validation</h3>`;
+
+    if (wrongAnswers.length === 0) {
+        qcmDiv.innerHTML += "<p>🎉 Bravo ! Vous avez tout juste !</p>";
+    } else {
+        qcmDiv.innerHTML += `<p>Vous avez ${wrongAnswers.length} erreur(s) :</p>`;
+        let list = "<ul>";
+        wrongAnswers.forEach(item => {
+            list += `<li><strong>${item.question}</strong><br>
+                     Votre réponse : ${item.yourAnswer}<br>
+                     Réponse correcte : ${item.correctAnswer}</li>`;
+        });
+        list += "</ul>";
+        qcmDiv.innerHTML += list;
+    }
+
+    nextBtn.style.display = "none"; // cacher le bouton
+}
+

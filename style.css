@@ -9,6 +9,7 @@ body {
 }
 
 .container {
+   
   background: white;
   padding: 20px 30px;
   border-radius: 12px;
@@ -46,4 +47,20 @@ button {
 
 button:hover {
   background: #0056b3;
+}
+
+#appel {
+  color: coral;
+  display: inline-block; /* nécessaire pour le transform */
+  animation: bouge 2s infinite alternate;
+ text-align: center;
+}
+
+@keyframes bouge {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(30px); /* décale de 30px vers la droite */
+  }
 }
