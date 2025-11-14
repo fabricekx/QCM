@@ -1,0 +1,102 @@
+[
+  {
+    "question": "Quel est le type d'un pointeur vers un entier en C ?",
+    "options": ["int", "int&", "int*", "ptr_int"],
+    "answer": 2
+  },
+  {
+    "question": "Quelle est l'opération réalisée par l'opérateur & en C ?",
+    "options": ["Addition", "Adresse de la variable", "Déréférencement", "Comparaison"],
+    "answer": 1
+  },
+  {
+    "question": "Quel opérateur permet d'accéder à la valeur pointée par un pointeur ?",
+    "options": ["&", "*", "->", "%"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle fonction de string.h permet de copier une chaîne dans une autre ?",
+    "options": ["strcopy()", "strcpy()", "copystr()", "string_copy()"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle fonction permet de connaître la longueur d'une chaîne (sans le \\0 final) ?",
+    "options": ["strlen()", "sizeof()", "strsize()", "length()"],
+    "answer": 0
+  },
+  {
+    "question": "Quelle fonction permet de comparer deux chaînes de caractères ?",
+    "options": ["strcmp()", "strcompare()", "equals()", "cmpstr()"],
+    "answer": 0
+  },
+  {
+    "question": "Quelle fonction permet de concaténer deux chaînes ?",
+    "options": ["stradd()", "strcat()", "concat()", "strmerge()"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est le caractère qui termine obligatoirement une string en C ?",
+    "options": ["\\n", "\\t", "\\0", "EOF"],
+    "answer": 2
+  },
+  {
+    "question": "Que représente un pointeur NULL ?",
+    "options": ["Une valeur aléatoire", "Une adresse valide", "Aucune adresse valide", "L'adresse 1"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le résultat de strlen(\"Hello\") ?",
+    "options": ["5", "6", "4", "Erreur"],
+    "answer": 0
+  },
+  {
+    "question": "Quelle fonction permet de rechercher un caractère dans une chaîne ?",
+    "options": ["findchar()", "strchr()", "charfind()", "strfind()"],
+    "answer": 1
+  },
+  {
+    "question": "Que fait exactement strcmp(\"abc\", \"abd\") ?",
+    "options": ["Retourne 0", "Retourne un nombre négatif", "Retourne un nombre positif", "Déclenche une erreur"],
+    "answer": 1
+  },
+  {
+    "question": "Que faut-il faire pour modifier le contenu d’une string littérale en C ?",
+    "options": ["Rien, c'est possible", "Utiliser strcpy dans un tableau de char", "Modifier directement la zone mémoire", "Utiliser sizeof"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est l'effet de : int *p = NULL; *p = 5;",
+    "options": ["Aucun problème", "Compilation impossible", "Segmentation fault", "5 est assigné à p"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le format correct pour lire un caractère avec scanf ?",
+    "options": ["scanf(\"%s\", &c);", "scanf(\"%char\", c);", "scanf(\" %c\", &c);", "scanf(\"char\", &c);"],
+    "answer": 2
+  },
+  {
+    "question": "Quelle est la fonction permettant de lire une ligne entière dans un tableau de char ?",
+    "options": ["gets()", "read()", "fgets()", "getline()"],
+    "answer": 2
+  },
+  {
+    "question": "Que fait fgets(buffer, 20, stdin) ?",
+    "options": ["Lit un caractère", "Lit au maximum 19 caractères + \\0", "Lit exactement 20 caractères", "Efface le buffer avant lecture"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle instruction est correcte pour déclarer un pointeur vers un char ?",
+    "options": ["char p;", "char* p;", "pointer char p;", "string* p;"],
+    "answer": 1
+  },
+  {
+    "question": "Que signifie *p si p est un pointeur valide ?",
+    "options": ["L'adresse suivante en mémoire", "La taille pointée", "La valeur pointée", "La valeur de p"],
+    "answer": 2
+  },
+  {
+    "question": "Quelle est la différence entre strcpy et strncpy ?",
+    "options": ["strncpy garantit toujours la présence d’un \\0", "strcpy exige une taille maximale", "strncpy peut ne pas ajouter de \\0", "Aucune différence"],
+    "answer": 2
+  }
+]
