@@ -8,19 +8,54 @@
   <body>
     <div class="container">
       <h1>QCM Aléatoire</h1>
+      <div id="formulaire">
+        <label id="label" for="theme">Choisir un thème :</label>
+        <select id="themeSelect">
+          <option value="">Select:</option>
+          <option value="base_c">Bases du language C</option>
+          <option value="pointeur_et_string">Pointeurs et Strings</option>
+          <option value="precompilateur">Le précompilateur</option>
 
-      <label id="label" for="theme">Choisir un thème :</label>
-      <select id="themeSelect">
-        <option value="">Select:</option>
-        <option value="base_c">Bases du language C</option>
-        <option value="pointeur_et_string">Pointeurs et Strings</option>
-        <!-- <option value="histoire">Histoire</option> -->
-      </select>
-      <button id="start">Commencer</button>
+          <option value="culture">Culture</option>
+        </select>
+        <label id="label2" for="nomEleve"> Etudiant </label>
+        <select id="eleve">
+          <option value="">Select:</option>
+          <option value="AHMED Hassan">AHMED Hassan</option>
+          <option value="BENTAIEB Nadir">BENTAIEB Nadir</option>
+          <option value="CARRE Sonny">CARRE Sonny</option>
+          <option value="CHATEL Louna">CHATEL Louna</option>
+          <option value="CHOUANA Adem">CHOUANA Adem</option>
+          <option value="DA VEIGA ALMADA Stanley">
+            DA VEIGA ALMADA Stanley
+          </option>
+          <option value="DOTTORINI-SPANO Lilian">DOTTORINI-SPANO Lilian</option>
+          <option value="FAUCHERRE Alexandre">FAUCHERRE Alexandre</option>
+          <option value="FAURE-GEORS Bastien">FAURE-GEORS Bastien</option>
+          <option value="KEPSEU NOUADJE Gislain Roy">
+            KEPSEU NOUADJE Gislain Roy
+          </option>
+          <option value="LEMPEREUR DE GUERNY Thomas">
+            LEMPEREUR DE GUERNY Thomas
+          </option>
+          <option value="MANGIARACINA Gabriel">MANGIARACINA Gabriel</option>
+          <option value="MARTINET Yann">MARTINET Yann</option>
+          <option value="SALDUCCI Chloe">SALDUCCI Chloe</option>
+          <option value="SAWADOGO Wendpanga Marianne">
+            SAWADOGO Wendpanga Marianne
+          </option>
+          <option value="TAGHI Jad">TAGHI Jad</option>
+          <option value="VIAUD Raphael">VIAUD Raphael</option>
+
+          <!-- <option value="histoire">Histoire</option> -->
+        </select>
+
+        <button id="start">Commencer</button>
+      </div>
 
       <div id="qcm" style="display: none"></div>
-      <div style="text-align: center;">
-      <button id="next" style="display: none ">Suivant</button>
+      <div style="text-align: center">
+        <button id="next" style="display: none">Suivant</button>
       </div>
     </div>
     <script src="script.js"></script>

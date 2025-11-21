@@ -1,9 +1,12 @@
 let questions = [];
 let currentQuestionIndex = 0;
 let score = 0;
+let testStartTime=0;
 
 // Elements
 const themeSelect = document.getElementById("themeSelect");
+const form_debut=document.getElementById("formulaire");
+const eleve = document.getElementById("eleve");
 const startBtn = document.getElementById("start");
 const nextBtn = document.getElementById("next");
 const qcmDiv = document.getElementById("qcm");
@@ -20,18 +23,22 @@ function shuffleArray(array) {
 // Affiche la question courante avec radio buttons
 function showQuestion() {
   if (currentQuestionIndex >= questions.length) {
-     showResults(); // délègue l'affichage à la fonction dédiée
+    showResults(); // délègue l'affichage à la fonction dédiée
 
     return;
   }
 
   const q = questions[currentQuestionIndex];
 
-  let optionsHtml = q.options.map((opt, i) => `
+  let optionsHtml = q.options
+    .map(
+      (opt, i) => `
     <label>
       <input type="radio" name="answer" value="${i}"> ${opt}
     </label><br>
-  `).join("");
+  `
+    )
+    .join("");
 
   qcmDiv.innerHTML = `
     <h3>${q.question}</h3>
@@ -52,33 +59,43 @@ nextBtn.addEventListener("click", () => {
     alert("Veuillez sélectionner une réponse !");
     return;
   }
-let answer = parseInt(selected.value);
+  let answer = parseInt(selected.value);
   if (answer === questions[currentQuestionIndex].answer) {
     score++;
+  } else {
+    wrongAnswers.push({
+      question: questions[currentQuestionIndex].question,
+      yourAnswer: questions[currentQuestionIndex].options[answer],
+      correctAnswer:
+        questions[currentQuestionIndex].options[
+          questions[currentQuestionIndex].answer
+        ],
+    });
   }
-  else { wrongAnswers.push({
-            question: questions[currentQuestionIndex].question,
-            yourAnswer: questions[currentQuestionIndex].options[answer],
-    correctAnswer: questions[currentQuestionIndex].options[questions[currentQuestionIndex].answer]
-        });
-   }
 
   currentQuestionIndex++;
   if (currentQuestionIndex < questions.length) {
-        showQuestion();
-    } else {
-        showResults();
-    }
+    showQuestion();
+  } else {
+    showResults();
+  }
 });
 
 // Démarrer le quiz
 startBtn.addEventListener("click", async () => {
   const theme = themeSelect.value;
+  const nomEleve = eleve.value;
+testStartTime = Date.now();
+
   if (!theme) {
     alert("Choisissez un thème !");
     return;
   }
-// console.log("Theme choisi " + theme);
+  if (!nomEleve) {
+    alert("Choisissez un étudiant !");
+    return;
+  }
+  // console.log("Theme choisi " + theme);
   try {
     const response = await fetch(`questions/${theme}.json`);
     questions = await response.json();
@@ -87,11 +104,10 @@ startBtn.addEventListener("click", async () => {
     currentQuestionIndex = 0;
     score = 0;
 
-    // Cacher le select et le bouton start
-    themeSelect.style.display = "none";
-    startBtn.style.display = "none";
-    label.style.display = "none";
- // Changer le titre pour le thème sélectionné
+    // Cacher le formulaire de début: selects (theme et nom) et le bouton start
+  
+    form_debut.style.display="none"
+    // Changer le titre pour le thème sélectionné
     let themeText = themeSelect.options[themeSelect.selectedIndex].text;
     h1Title.textContent = `QCM : ${themeText}`;
 
@@ -103,22 +119,48 @@ startBtn.addEventListener("click", async () => {
 });
 
 function showResults() {
-    qcmDiv.innerHTML = `<h2>Test terminé !</h2><p>Score : ${score}/${questions.length}</p><br><h3 id="appel"> Appel Fabrice pour validation</h3>`;
+  const nomEleve = eleve.value;
+  const theme= themeSelect.value;
+let testEndTime = Date.now();
+let elapsedMs = testEndTime - testStartTime;
 
-    if (wrongAnswers.length === 0) {
-        qcmDiv.innerHTML += "<p>🎉 Bravo ! Vous avez tout juste !</p>";
-    } else {
-        qcmDiv.innerHTML += `<p>Vous avez ${wrongAnswers.length} erreur(s) :</p>`;
-        let list = "<ul>";
-        wrongAnswers.forEach(item => {
-            list += `<li><strong>${item.question}</strong><br>
+let seconds = Math.floor(elapsedMs / 1000);
+let minutes = Math.floor(seconds / 60);
+seconds = seconds % 60;
+  qcmDiv.innerHTML = `<h2>Test terminé en ${minutes} min ${seconds} s !</h2><p>Score de ${nomEleve}: ${score}/${questions.length}</p><br><h3 id="appel"> Appel Fabrice pour validation</h3>`;
+
+  if (wrongAnswers.length === 0) {
+    qcmDiv.innerHTML += "<p>🎉 Bravo ! Vous avez tout juste !</p>";
+  } else {
+    qcmDiv.innerHTML += `<p>Vous avez ${wrongAnswers.length} erreur(s) :</p>`;
+    let list = "<ul>";
+    wrongAnswers.forEach((item) => {
+      list += `<li><strong>${item.question}</strong><br>
                      Votre réponse : ${item.yourAnswer}<br>
                      Réponse correcte : ${item.correctAnswer}</li>`;
-        });
-        list += "</ul>";
-        qcmDiv.innerHTML += list;
-    }
+    });
+    list += "</ul>";
+    qcmDiv.innerHTML += list;
+  }
 
-    nextBtn.style.display = "none"; // cacher le bouton
+  nextBtn.style.display = "none"; // cacher le bouton
+
+  // script pour envoyer les notes sur ma google sheet:
+  fetch("https://script.google.com/macros/s/AKfycbxTQJ4KUPYOgsMbiO2eSO6FyPDS4C_sZLaLC0Ii57SAws3KnJzJN8pu1Bu7mB0VRZ-ulg/exec", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/x-www-form-urlencoded" // on ne passe pas un json car ca bloque
+  },
+  body: new URLSearchParams({
+    key: "123SECRETnotes1apg",
+    theme : theme,
+    nom: nomEleve,
+    duree: elapsedMs,
+    note: score
+  })
+})
+.then(r => r.text())
+.then(console.log);
+
+  
 }
-

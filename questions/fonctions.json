@@ -1,0 +1,106 @@
+[
+  {
+    "question": "Quel mot-clé permet de déclarer une fonction en C ?",
+    "options": ["function", "def", "void", "Aucun mot-clé spécifique"],
+    "answer": 3
+  },
+  {
+    "question": "Quel est le type d'un pointeur vers un entier en C ?",
+    "options": ["int", "int&", "int*", "ptr_int"],
+    "answer": 2
+  },
+  {
+    "question": "Que signifie 'return' dans une fonction C ?",
+    "options": ["Arrête l'exécution du programme", "Renvoie une valeur et termine la fonction", "Affiche une valeur", "Crée une nouvelle variable"],
+    "answer": 1
+  },
+  {
+    "question": "Comment appelle-t-on les valeurs passées dans les parenthèses lors de l'appel d'une fonction ?",
+    "options": ["Arguments", "Déclarations", "Types", "Étiquettes"],
+    "answer": 0
+  },
+  {
+    "question": "Quelle est la bonne syntaxe pour déclarer une fonction qui renvoie un entier ?",
+    "options": ["int maFonction;", "int maFonction()", "maFonction() : int", "fonction int maFonction()"],
+    "answer": 1
+  },
+  {
+    "question": "Dans une fonction prenant un tableau en paramètre, que reçoit réellement la fonction ?",
+    "options": ["Une copie complète du tableau", "Un pointeur vers le premier élément", "La taille du tableau", "Aucune donnée"],
+    "answer": 1
+  },
+  
+  {
+    "question": "Quelle est la bonne signature pour une fonction prenant un pointeur vers double et ne renvoyant rien ?",
+    "options": ["void f(double* p)", "f(void double* p)", "double* f(void)", "pointer f(double)"],
+    "answer": 0
+  },
+  {
+    "question": "Quel est le mot-clé utilisé lorsqu'une fonction ne renvoie aucune valeur ?",
+    "options": ["null", "none", "void", "empty"],
+    "answer": 2
+  },
+  {
+    "question": "Que se passe-t-il si une fonction est appelée sans prototype préalable ?",
+    "options": ["Erreur de compilation", "Elle est considérée comme retournant un int", "Elle ne s'exécute pas", "Elle est ignorée"],
+    "answer": 0
+  },
+  {
+    "question": "Quelle est la bonne façon de passer un entier par adresse à une fonction ?",
+    "options": ["f(x)", "f(&x)", "f(*x)", "f(adresse(x))"],
+    "answer": 1
+  },
+  
+  {
+    "question": "Quel est le type de la fonction main dans un programme C standard ?",
+    "options": ["void main()", "int main()", "main()", "program main()"],
+    "answer": 1
+  },
+  {
+    "question": "Comment déclarer une fonction prenant un tableau d'entiers en paramètre ?",
+    "options": ["void f(int tab[])", "void f(int[] tab)", "void f(array int tab)", "void f(tab[])"],
+    "answer": 0
+  },
+  {
+    "question": "Comment renvoyer plusieurs valeurs avec une fonction C classique ?",
+    "options": ["Impossible", "Avec return multiple", "Avec des pointeurs passés en argument", "En renvoyant un tableau local"],
+    "answer": 2
+  },
+  {
+    "question": "Quel est le passage par défaut des arguments en C ?",
+    "options": ["Par valeur", "Par référence", "Par copie profonde", "Par adresse"],
+    "answer": 0
+  },
+  {
+    "question": "Qu’indique l’écriture int (*f)(double); ?",
+    "options": ["Un pointeur vers un double", "Une fonction prenant un int et renvoyant un double", "Un pointeur vers fonction prenant un double et renvoyant un int", "Une fonction renvoyant un pointeur"],
+    "answer": 2
+  },
+  {
+    "question": "Quelle est la bonne écriture pour une fonction récursive calculant la factorielle ?",
+    "options": ["int fact(n) { return n * fact(n-1); }", "int fact(int n) { if(n<=1) return 1; else return n*fact(n-1); }", "fact(n) { return fact(n--); }", "int fact(int n) = recursion;"],
+    "answer": 1
+  },
+ 
+  {
+    "question": "Quel est l’intérêt d’utiliser const dans un paramètre de fonction ?",
+    "options": ["Améliore la vitesse", "Empêche la fonction de modifier l’argument", "Oblige l’appelant à passer un pointeur", "Change le type de la fonction"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle est la bonne manière de passer un tableau de 10 entiers à une fonction ?",
+    "options": ["f(int tab)", "f(int tab[10])", "f(int* tab)", "Les deux réponses f(int tab[10]) et f(int* tab) sont équivalentes"],
+    "answer": 3
+  },
+  
+  {
+    "question": "Quelle est la bonne écriture pour déclarer un pointeur vers une fonction qui prend un int et renvoie un double ?",
+    "options": ["double *f(int)", "double (*f)(int)", "f(double(int))", "double f*(int)"],
+    "answer": 1
+  },
+  {
+  "question": "Que se passe-t-il lorsqu'un argument est passé par valeur à une fonction en C ?",
+  "options": ["La fonction peut modifier la variable originale", "Une copie de la valeur est transmise à la fonction", "L'adresse de la variable est toujours transmise", "La variable devient globale"],
+  "answer": 1
+}
+]

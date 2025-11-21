@@ -45,8 +45,14 @@ button {
   cursor: pointer;
 }
 
+
+
 button:hover {
   background: #0056b3;
+}
+
+select {
+  margin-bottom: 10px;
 }
 
 #appel {

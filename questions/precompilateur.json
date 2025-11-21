@@ -1,0 +1,102 @@
+[
+  {
+    "question": "Quel est le rôle de #define en C ?",
+    "options": ["Définir une variable", "Définir une constante ou une macro", "Inclure un fichier", "Conditionner du code"],
+    "answer": 1
+  },
+  {
+    "question": "Comment vérifier si une macro est définie ?",
+    "options": ["#ifdef", "#ifndef", "#if", "#include"],
+    "answer": 0
+  },
+  {
+    "question": "Que fait #ifndef ?",
+    "options": ["Exécute le code si la macro existe", "Exécute le code si la macro n'existe pas", "Inclut un fichier", "Déclare une fonction"],
+    "answer": 1
+  },
+  {
+    "question": "Que fait #undef ?",
+    "options": ["Supprime une macro", "Déclare une variable", "Inclut un fichier", "Exécute un bloc conditionnel"],
+    "answer": 0
+  },
+  {
+    "question": "Quelle est la bonne syntaxe pour définir une macro avec argument ?",
+    "options": ["#define SQUARE(x) x*x", "#define SQUARE = x*x", "#define SQUARE(x): x*x", "#define SQUARE(x) {x*x}"],
+    "answer": 0
+  },
+  {
+    "question": "Quelle directive permet d’inclure un fichier externe ?",
+    "options": ["#include", "#define", "#ifdef", "#pragma"],
+    "answer": 0
+  },
+  {
+    "question": "Que renvoie la macro prédéfinie __DATE__ ?",
+    "options": ["La date de compilation", "La date d'exécution", "La date système", "Rien"],
+    "answer": 0
+  },
+  {
+    "question": "Que renvoie la macro prédéfinie __TIME__ ?",
+    "options": ["La date système", "La date de compilation", "L’heure système", "L’heure de compilation"],
+    "answer": 3
+  },
+  {
+    "question": "Que renvoie la macro prédéfinie __FILE__ ?",
+    "options": ["Le nom du fichier source compilé", "La fonction courante", "Le chemin du dossier", "Le nom du projet"],
+    "answer": 0
+  },
+  {
+    "question": "Que renvoie la macro prédéfinie __LINE__ ?",
+    "options": ["Le numéro de ligne de code actuel", "Le numéro de fichier", "La version du compilateur", "La date de compilation"],
+    "answer": 0
+  },
+  {
+    "question": "Que fait la directive #if ?",
+    "options": ["Teste une expression constante et compile le code si vrai", "Teste une variable", "Déclare une macro", "Exécute une fonction"],
+    "answer": 0
+  },
+  {
+    "question": "Quelle directive permet d’exécuter un bloc si une macro n’est pas définie ?",
+    "options": ["#if", "#ifdef", "#ifndef", "#else"],
+    "answer": 2
+  },
+  {
+    "question": "Quelle directive sert à ajouter un bloc de code sinon ?",
+    "options": ["#elif", "#else", "#endif", "#undef"],
+    "answer": 1
+  },
+  {
+    "question": "Comment termine-t-on un bloc conditionnel préprocesseur ?",
+    "options": ["#end", "#endif", "#stop", "#close"],
+    "answer": 1
+  },
+  {
+    "question": "Que fait la macro suivante ? #define MAX(a,b) ((a)>(b)?(a):(b))",
+    "options": ["Calcule le maximum de a et b", "Calcule le minimum de a et b", "Déclare une variable MAX", "Crée un tableau de taille max(a,b)"],
+    "answer": 0
+  },
+  {
+    "question": "Quelle est la différence entre #define et const ?",
+    "options": ["Aucune, ce sont identiques", "#define est résolu à la compilation, const est une variable typée", "#define crée une variable, const une macro", "#define est dynamique"],
+    "answer": 1
+  },
+  {
+    "question": "Que fait #elif ?",
+    "options": ["Equivalent de else if pour les macros", "Fin d’un bloc if", "Déclare une macro", "Inclut un fichier"],
+    "answer": 0
+  },
+  {
+    "question": "Peut-on passer plusieurs arguments à une macro ?",
+    "options": ["Oui", "Non", "Seulement deux", "Seulement si elles sont constantes"],
+    "answer": 0
+  },
+  {
+    "question": "Quelle directive permet d’éviter qu’un fichier header soit inclus plusieurs fois ?",
+    "options": ["#include_guard", "#ifndef ... #define ... #endif", "#pragma once", "Les deux dernières sont correctes"],
+    "answer": 3
+  },
+  {
+    "question": "Que fait #pragma ?",
+    "options": ["Permet des instructions spécifiques au compilateur", "Déclare une fonction", "Déclare une macro", "Inclut un fichier"],
+    "answer": 0
+  }
+]
