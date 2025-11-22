@@ -11,13 +11,34 @@ const startBtn = document.getElementById("start");
 const nextBtn = document.getElementById("next");
 const qcmDiv = document.getElementById("qcm");
 const h1Title = document.querySelector("h1"); // <- déclaration ici
-
+const time=document.getElementById("time");
 // Mélange un tableau
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
   }
+}
+
+// Calcul du temps
+function calculateTime(testStartTime) {
+  let testEndTime = Date.now();
+let elapsedMs = testEndTime - testStartTime;
+let seconds = Math.floor(elapsedMs / 1000);
+let minutes = Math.floor(seconds / 60);
+seconds = seconds % 60;
+  return { minutes, seconds, elapsedMs };
+}
+
+// Timer
+function startTimer() {
+  testStartTime = Date.now();
+time.style.display = "block";
+  timerInterval = setInterval(() => {
+    const { minutes, seconds } = calculateTime(testStartTime);
+    document.getElementById("timer").textContent =
+      `${minutes} min ${seconds} s`;
+  }, 1000);
 }
 
 // Affiche la question courante avec radio buttons
@@ -41,7 +62,7 @@ function showQuestion() {
     .join("");
 
   qcmDiv.innerHTML = `
-    <h3>${q.question}</h3>
+    <h3>${currentQuestionIndex+1}/${questions.length} ${q.question}</h3>
     <form id="qcmForm">
       ${optionsHtml}
     </form>
@@ -85,8 +106,7 @@ nextBtn.addEventListener("click", () => {
 startBtn.addEventListener("click", async () => {
   const theme = themeSelect.value;
   const nomEleve = eleve.value;
-testStartTime = Date.now();
-
+ startTimer()  // initialise testStartTime et affiche le timer dans la div
   if (!theme) {
     alert("Choisissez un thème !");
     return;
@@ -118,15 +138,13 @@ testStartTime = Date.now();
   }
 });
 
-function showResults() {
-  const nomEleve = eleve.value;
-  const theme= themeSelect.value;
-let testEndTime = Date.now();
-let elapsedMs = testEndTime - testStartTime;
 
-let seconds = Math.floor(elapsedMs / 1000);
-let minutes = Math.floor(seconds / 60);
-seconds = seconds % 60;
+
+function showResults() {
+  time.style.display = "none";
+  const nomEleve = eleve.value;
+  const theme= themeSelect.value; // récupération de la value, pas du texte
+const { minutes, seconds, elapsedMs } = calculateTime(testStartTime);
   qcmDiv.innerHTML = `<h2>Test terminé en ${minutes} min ${seconds} s !</h2><p>Score de ${nomEleve}: ${score}/${questions.length}</p><br><h3 id="appel"> Appel Fabrice pour validation</h3>`;
 
   if (wrongAnswers.length === 0) {
