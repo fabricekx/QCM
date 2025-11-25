@@ -1,0 +1,190 @@
+[
+{
+"question": "Quel est le rôle d'un fichier .h dans un projet C ?",
+"options": [
+"Contenir le code compilé",
+"Déclarer les fonctions et types accessibles depuis d'autres fichiers",
+"Stocker les variables globales",
+"Gérer le système de fichiers"
+],
+"answer": 1
+},
+{
+"question": "Quel mot-clé empêche une variable globale d'être visible en dehors du fichier C ?",
+"options": ["extern", "private", "static", "restrict"],
+"answer": 2
+},
+{
+"question": "Quel mot-clé permet de rendre une fonction visible uniquement dans son fichier ?",
+"options": ["hidden", "static", "local", "private"],
+"answer": 1
+},
+{
+"question": "Que fait la directive #include ?",
+"options": [
+"Crée une nouvelle bibliothèque",
+"Exécute un fichier C",
+"Insère le contenu d'un fichier dans un autre",
+"Compile une fonction"
+],
+"answer": 2
+},
+{
+"question": "Quel est l'avantage principal d'une organisation du code en modules ?",
+"options": [
+"Plus gros fichiers",
+"Lisibilité, maintenance et réutilisation du code",
+"Compilation plus lente",
+"Moins de fonctions utilisables"
+],
+"answer": 1
+},
+{
+"question": "Quel est le rôle du fichier .c dans un module ?",
+"options": [
+"Déclarer les prototypes",
+"Définir les variables globales du système",
+"Définir les fonctions et leur code",
+"Répertorier les dépendances"
+],
+"answer": 2
+},
+{
+"question": "Quelle directive empêche un fichier .h d'être inclus plusieurs fois ?",
+"options": [
+"#pragma once",
+"#avoid multiple",
+"#ifndef",
+"#no_duplicate"
+],
+"answer": 0
+},
+{
+"question": "Quelle est la conséquence d'inclure un .c au lieu d'un .h ?",
+"options": [
+"Aucune",
+"Le code source est copié, provoquant des duplications",
+"Le programme compile plus vite",
+"Les .h deviennent inutiles"
+],
+"answer": 1
+},
+{
+"question": "Quel est le problème principal des variables globales non static ?",
+"options": [
+"Elles sont optimisées par le compilateur",
+"Elles sont invisibles dans main.c",
+"Elles sont accessibles depuis n'importe quel fichier",
+"Elles ne peuvent pas être initialisées"
+],
+"answer": 2
+},
+
+{
+"question": "Pourquoi écrit-on des prototypes dans un fichier header ?",
+"options": [
+"Pour éviter les warnings de fonction non déclarée",
+"Pour accélérer l'exécution",
+"Pour autoriser les commentaires",
+"Parce que c'est obligatoire par la norme"
+],
+"answer": 0
+},
+
+{
+"question": "Quel est le rôle d'un module en C ?",
+"options": [
+"Séparer les déclarations et les définitions pour structurer le programme",
+"Compiler automatiquement le projet",
+"Générer un binaire multiplateforme",
+"Créer un fichier d'entrée unique"
+],
+"answer": 0
+},
+{
+"question": "Que se passe-t-il si une fonction utilisée n'a pas été déclarée via un prototype ?",
+"options": [
+"Le programme ne compile jamais",
+"Un avertissement ou une erreur peut être généré",
+"La fonction est ignorée",
+"Le compilateur la crée automatiquement"
+],
+"answer": 1
+},
+{
+"question": "Quel mot-clé empêche une fonction d'être appelée dans un autre fichier ?",
+"options": ["extern", "private", "static", "restrict"],
+"answer": 2
+},
+{
+"question": "Quel est un avantage des variables static internes à un module ?",
+"options": [
+"Elles sont accessibles dans tout le programme",
+"Elles peuvent être supprimées à l'exécution",
+"Elles encapsulent les données internes au module",
+"Elles remplacent les pointeurs"
+],
+"answer": 2
+},
+{
+"question": "Que signifie la directive #ifndef dans un header ?",
+"options": [
+"Compiler seulement si le fichier existe",
+"Compiler seulement si le symbole n'est pas encore défini",
+"Exécuter du code système",
+"Empêcher le code static"
+],
+"answer": 1
+},
+{
+"question": "Pourquoi une fonction static possède-t-elle une portée limitée au fichier ?",
+"options": [
+"Pour optimiser le binaire",
+"Parce que le linker l'ignore dans les autres fichiers",
+"Parce qu'elle ne peut pas être déclarée dans un header",
+"Parce qu'elle ne possède pas d'adresse"
+],
+"answer": 1
+},
+{
+"question": "Que se passe-t-il si un même symbole est défini dans deux fichiers non static ?",
+"options": [
+"Le compilateur renomme automatiquement les variables",
+"Le programme se comporte normalement",
+"Le linker signale une erreur de symbole multiple",
+"Les deux valeurs se fusionnent"
+],
+"answer": 2
+},
+{
+"question": "Quel est l'intérêt d'un module bien structuré ?",
+"options": [
+"Modifier le code sans impacter les autres modules",
+"Empêcher l'utilisation de headers",
+"Obliger l'utilisation de variables globales",
+"Rendre le code plus lent"
+],
+"answer": 0
+},
+
+  {
+    "question": "Que se passe-t-il si un fichier .c utilise une fonction non déclarée dans un header ?",
+    "options": [
+      "Le code fonctionne toujours",
+      "Le compilateur émet un avertissement ou une erreur",
+      "La fonction est créée automatiquement par le compilateur",
+      "Le programme s'exécute mais ignore la fonction"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Pourquoi utilise-t-on généralement des variables static dans un fichier .c plutôt que des variables globales classiques ?",
+    "options": [
+      "Pour augmenter la vitesse de compilation",
+      "Pour limiter leur visibilité au fichier et éviter les conflits",
+      "Pour que la variable soit détruite après chaque appel",
+      "Pour l'utiliser dans tous les fichiers"
+    ],
+    "answer": 1
+  }
+]
