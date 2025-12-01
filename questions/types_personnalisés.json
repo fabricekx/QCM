@@ -1,0 +1,202 @@
+[
+  {
+    "question": "Quel est le rôle principal d'un enum en C ?",
+    "options": [
+      "Donner des noms symboliques à des constantes entières",
+      "Définir une nouvelle fonction",
+      "Allouer de la mémoire dynamique",
+      "Créer une structure de données complexe"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle est la valeur par défaut du premier élément d'un enum si aucune valeur n'est précisée ?",
+    "options": [
+      "0",
+      "1",
+      "-1",
+      "La valeur est indéterminée"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle est la bonne syntaxe pour déclarer un enum nommé Couleur contenant ROUGE, VERT et BLEU ?",
+    "options": [
+      "enum Couleur { ROUGE, VERT, BLEU };",
+      "typedef enum ( ROUGE, VERT, BLEU ) Couleur;",
+      "enum {Couleur: ROUGE, VERT, BLEU};",
+      "enum Couleur = {ROUGE,VERT,BLEU};"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Peut-on assigner explicitement des valeurs identiques à plusieurs noms dans un enum ?",
+    "options": [
+      "Oui, plusieurs constantes peuvent avoir la même valeur",
+      "Non, toutes les valeurs doivent être uniques",
+      "Seulement si le compilateur est configuré",
+      "Seulement pour le premier élément"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Qu'est-ce qu'une struct en langage C ?",
+    "options": [
+      "Un regroupement de variables (champs) sous un même type",
+      "Une fonction spéciale",
+      "Une directive du préprocesseur",
+      "Une macro complexe"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle est la bonne déclaration d'une struct Point avec deux entiers x et y ?",
+    "options": [
+      "struct Point { int x; int y; };",
+      "struct Point (int x, int y);",
+      "typedef struct { x:int; y:int; } Point;",
+      "struct Point = {int x; int y;};"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment déclare-t-on une variable locale p de type struct Point ?",
+    "options": [
+      "struct Point p;",
+      "Point p;",
+      "p : struct Point;",
+      "declare p as Point;"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment accéder au champ y d'une variable struct Point nommée p ?",
+    "options": [
+      "p.y",
+      "p->y",
+      "&p.y",
+      "p[y]"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle est la différence entre `struct Point p` et `struct Point *p` ?",
+    "options": [
+      "`struct Point p` est une variable struct par valeur, `struct Point *p` est un pointeur vers une struct",
+      "Il n'y a aucune différence",
+      "`struct Point p` est une typedef, `struct Point *p` est une fonction",
+      "`struct Point p` alloue dynamiquement, `struct Point *p` pas"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel opérateur utilise-t-on pour accéder à un champ via un pointeur sur struct ?",
+    "options": [
+      ". (point)",
+      "-> (fleche)",
+      "* (déréférencement)",
+      "& (adresse)"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quel est l'objectif du mot-clé typedef en C ?",
+    "options": [
+      "Créer un alias (un nouveau nom) pour un type existant",
+      "Définir une nouvelle structure",
+      "Allouer de la mémoire",
+      "Déclarer une fonction inline"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment créer un alias Position pour `struct Point` avec typedef ?",
+    "options": [
+      "typedef struct Point Position;",
+      "typedef Position struct Point;",
+      "struct Point typedef Position;",
+      "typedef struct {int x; int y;} Point; Position;"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Pourquoi utiliser typedef pour des structs ou enums rend le code plus lisible ?",
+    "options": [
+      "Parce qu'on peut utiliser un nom simple au lieu de `struct ...` ou `enum ...`",
+      "Parce que typedef augmente la vitesse d'exécution",
+      "Parce que typedef alloue automatiquement la mémoire",
+      "Parce que typedef empêche les erreurs de compilation"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Peut-on combiner typedef avec enum pour créer un alias de type ?",
+    "options": [
+      "Oui, par exemple `typedef enum {STOP, MARCHE} Etat;`",
+      "Non, typedef ne s'applique pas aux enums",
+      "Oui, mais seulement pour les structs",
+      "Seulement sur certains compilateurs"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle est la bonne façon de définir `Etat` comme alias pour un enum contenant STOP et MARCHE ?",
+    "options": [
+      "typedef enum { STOP, MARCHE } Etat;",
+      "enum Etat { STOP, MARCHE }; typedef Etat;",
+      "enum { STOP, MARCHE } typedef Etat;",
+      "typedef enum Etat { STOP, MARCHE };"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Comment initialiser une struct Point p à la déclaration avec x=3 et y=5 ?",
+    "options": [
+      "struct Point p = {3, 5};",
+      "struct Point p = (3,5);",
+      "struct Point p = x:3, y:5;",
+      "p = struct Point {3,5};"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Que se passe-t-il si on n'initialise pas tous les champs d'une struct lors de sa déclaration ?",
+    "options": [
+      "Les champs non initialisés sont mis à 0 (zéro-initialisés)",
+      "Le programme plante à l'exécution",
+      "Les champs contiennent des valeurs aléatoires",
+      "La compilation échoue"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Peut-on créer un tableau de structs en C (par exemple `struct Point pts[10];`) ?",
+    "options": [
+      "Oui, on peut créer un tableau de structs",
+      "Non, les structs ne peuvent pas être en tableau",
+      "Oui, mais seulement si on utilise typedef",
+      "Oui, mais uniquement avec malloc"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Peut-on passer une struct comme argument à une fonction en C ?",
+    "options": [
+      "Oui, la struct est copiée par valeur si on la passe directement",
+      "Non, on doit toujours passer un pointeur",
+      "Oui, mais uniquement avec typedef",
+      "Non, les structs ne peuvent pas être passées"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quel est l'avantage de passer un pointeur vers une struct à une fonction plutôt que la struct elle-même ?",
+    "options": [
+      "Éviter la copie (plus efficace) et permettre de modifier la structure d'origine",
+      "Empêcher toute modification de la struct",
+      "Rendre la fonction inline automatiquement",
+      "Augmenter la taille du binaire"
+    ],
+    "answer": 0
+  }
+]
