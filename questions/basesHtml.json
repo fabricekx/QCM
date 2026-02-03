@@ -1,0 +1,202 @@
+[
+  {
+    "question": "À quoi sert la balise &lt;div&gt; en HTML ?",
+    "options": [
+      "À afficher une image",
+      "À créer un lien",
+      "À structurer le contenu en blocs",
+      "À définir un titre"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quelle balise est utilisée pour créer un titre principal ?",
+    "options": ["p", "h1", "div", "a"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle balise permet de créer un lien hypertexte ?",
+    "options": ["img", "div", "a", "h2"],
+    "answer": 2
+  },
+  {
+    "question": "Quel attribut est obligatoire pour afficher une image avec &lt;img&gt; ?",
+    "options": ["href", "src", "alt", "title"],
+    "answer": 1
+  },
+  {
+    "question": "À quoi sert l’attribut alt d’une image ?",
+    "options": [
+      "À changer la taille de l’image",
+      "À ajouter une bordure",
+      "À fournir un texte alternatif",
+      "À rendre l’image cliquable"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quelle propriété CSS permet de positionner un élément ?",
+    "options": ["display", "float", "position", "overflow"],
+    "answer": 2
+  },
+  {
+    "question": "Que fait la valeur position: relative ?",
+    "options": [
+      "Elle sort l’élément du flux",
+      "Elle positionne l’élément par rapport à la fenêtre",
+      "Elle permet de déplacer l’élément par rapport à sa position initiale",
+      "Elle fixe l’élément à l’écran"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Que fait la valeur position: absolute ?",
+    "options": [
+      "Elle positionne l’élément par rapport à son parent positionné",
+      "Elle garde l’élément dans le flux normal",
+      "Elle centre automatiquement l’élément",
+      "Elle empêche tout déplacement"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Que fait la valeur position: fixed ?",
+    "options": [
+      "Elle positionne l’élément dans le flux",
+      "Elle fixe l’élément par rapport à la fenêtre",
+      "Elle aligne l’élément à gauche",
+      "Elle cache l’élément"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle propriété permet de déplacer un élément positionné ?",
+    "options": ["margin", "padding", "top / left / right / bottom", "display"],
+    "answer": 2
+  },
+  {
+    "question": "Quelle est la valeur display par défaut d’une balise &lt;div&gt; ?",
+    "options": ["inline", "inline-block", "block", "none"],
+    "answer": 2
+  },
+  {
+    "question": "Quelle est la valeur display par défaut d’une balise &lt;a&gt; ?",
+    "options": ["block", "inline", "none", "relative"],
+    "answer": 1
+  },
+  {
+    "question": "Que permet la propriété display ?",
+    "options": [
+      "De changer la couleur du texte",
+      "De définir le type d’affichage d’un élément",
+      "De positionner un élément",
+      "De modifier la police"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle unité est relative à la taille de la fenêtre (hauteur) ?",
+    "options": ["px", "%", "vh", "em"],
+    "answer": 2
+  },
+  {
+    "question": "Quelle unité est relative à la largeur de la fenêtre ?",
+    "options": ["vw", "px", "%", "pt"],
+    "answer": 0
+  },
+  {
+    "question": "À quoi correspond l’unité px ?",
+    "options": [
+      "À une unité relative",
+      "À une unité dépendante du parent",
+      "À une unité fixe en pixels",
+      "À une unité de viewport"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "À quoi correspond une taille en pourcentage (%) ?",
+    "options": [
+      "À la taille de la fenêtre",
+      "À la taille du parent",
+      "À la taille de l’écran",
+      "À la taille du texte"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle propriété permet de modifier la taille du texte ?",
+    "options": ["font-weight", "text-align", "font-size", "line-height"],
+    "answer": 2
+  },
+  {
+    "question": "Quel élément est sorti du flux normal du document ?",
+    "options": [
+      "Un élément en position relative",
+      "Un élément en position absolute",
+      "Un élément en display block",
+      "Un élément inline"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Que se passe-t-il si aucun parent n’est positionné pour un élément absolute ?",
+    "options": [
+      "Il disparaît",
+      "Il se positionne par rapport à la page",
+      "Il reste dans le flux",
+      "Il devient fixed"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "À quoi sert l’attribut id en HTML ?",
+    "options": [
+      "À identifier plusieurs éléments",
+      "À appliquer un style générique",
+      "À identifier un élément unique dans la page",
+      "À créer une classe CSS"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "À quoi sert l’attribut class en HTML ?",
+    "options": [
+      "À identifier un élément unique",
+      "À grouper plusieurs éléments pour leur appliquer des styles communs",
+      "À créer un lien",
+      "À définir une position"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment sélectionne-t-on une classe en CSS ?",
+    "options": [
+      "#maClasse",
+      ".maClasse",
+      "maClasse",
+      "*maClasse"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment sélectionne-t-on un id en CSS ?",
+    "options": [
+      ".monId",
+      "*monId",
+      "#monId",
+      "monId"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quelle règle est correcte concernant id et class ?",
+    "options": [
+      "Un id peut être utilisé plusieurs fois",
+      "Une class ne peut être utilisée qu’une seule fois",
+      "Un id est unique, une class peut être réutilisée",
+      "Id et class sont équivalents"
+    ],
+    "answer": 2
+  }
+]
