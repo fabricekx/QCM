@@ -1,0 +1,172 @@
+[
+  {
+    "question": "Quelle propriété permet d’activer Flexbox sur un élément ?",
+    "options": ["position: flex", "display: flex", "flex: block", "layout: flex"],
+    "answer": 1
+  },
+  {
+    "question": "Quel est l’axe principal par défaut en Flexbox ?",
+    "options": ["vertical", "diagonal", "aucun", "horizontal"],
+    "answer": 3
+  },
+  {
+    "question": "Quelle propriété permet de changer l’axe principal ?",
+    "options": ["align-items", "flex-direction", "justify-content", "flex-wrap"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle valeur de flex-direction empile les éléments verticalement ?",
+    "options": ["row", "column", "inline", "block"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle propriété aligne les éléments sur l’axe principal ?",
+    "options": ["align-content", "align-items", "justify-content", "text-align"],
+    "answer": 2
+  },
+  {
+    "question": "Quelle valeur de justify-content place les éléments avec un espace égal autour d’eux ?",
+    "options": ["space-around", "center", "flex-end", "stretch"],
+    "answer": 0
+  },
+  {
+    "question": "Quelle propriété aligne les éléments sur l’axe secondaire ?",
+    "options": ["justify-items", "align-items", "flex-align", "place-content"],
+    "answer": 1
+  },
+  {
+    "question": "Que fait la valeur align-items: center ?",
+    "options": [
+      "Elle aligne les éléments à gauche",
+      "Elle agrandit les éléments",
+      "Elle centre les éléments sur l’axe secondaire",
+      "Elle les place en bas"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quelle propriété permet aux éléments flex de passer à la ligne ?",
+    "options": ["flex-break", "wrap", "flex-wrap", "line-break"],
+    "answer": 2
+  },
+  {
+    "question": "Quelle valeur empêche les éléments flex de passer à la ligne ?",
+    "options": ["nowrap", "wrap", "no-break", "single-line"],
+    "answer": 0
+  },
+  {
+    "question": "Quelle pseudo-classe s’active lorsque la souris survole un élément ?",
+    "options": [":focus", ":hover", ":checked", ":visited"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle pseudo-classe s’active pendant le clic sur un élément ?",
+    "options": [":hover", ":pressed", ":active", ":selected"],
+    "answer": 2
+  },
+  {
+    "question": "Comment écrire une règle pour changer la couleur d’un lien au survol ?",
+    "options": [
+      "a.hover { color: red; }",
+      "a::hover { color: red; }",
+      "a:hover { color: red; }",
+      "a-hover { color: red; }"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quelle pseudo-classe cible le premier enfant d’un parent ?",
+    "options": [":nth-child(1)", ":first-child", ":first-element", ":child-first"],
+    "answer": 1
+  },
+  {
+    "question": "Que sélectionne :nth-child(3) ?",
+    "options": [
+      "Tous les multiples de 3",
+      "Le troisième élément uniquement",
+      "Les trois premiers éléments",
+      "Le dernier élément"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Comment sélectionner un élément sur deux avec nth-child ?",
+    "options": [
+      ":nth-child(2)",
+      ":nth-child(even)",
+      ":nth-child(1)",
+      ":nth-child(all)"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Quelle fonction CSS permet de déplacer un élément ?",
+    "options": ["rotate()", "scale()", "translate()", "skew()"],
+    "answer": 2
+  },
+  {
+    "question": "Que fait transform: scale(1.2) ?",
+    "options": [
+      "Fait pivoter l’élément",
+      "Réduit l’élément",
+      "Déplace l’élément",
+      "Agrandit l’élément"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Quelle fonction permet de faire tourner un élément ?",
+    "options": ["translate()", "rotate()", "move()", "turn()"],
+    "answer": 1
+  },
+  {
+    "question": "Comment appliquer plusieurs transformations ?",
+    "options": [
+      "En les séparant par des virgules",
+      "Ce n’est pas possible",
+      "En les séparant par des espaces",
+      "Avec un + entre chaque"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Quelle pseudo-classe pourrait être utilisée pour changer le style d’un bouton lorsqu’on clique dessus ?",
+    "options": [":hover", ":active", ":focus-visible", ":first-child"],
+    "answer": 1
+  },
+  {
+    "question": "Quelle combinaison centre parfaitement des éléments horizontalement ET verticalement avec Flexbox ?",
+    "options": [
+      "justify-content: center uniquement",
+      "align-items: center uniquement",
+      "text-align: center",
+      "justify-content: center et align-items: center"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Que se passe-t-il si un conteneur flex a flex-direction: column ?",
+    "options": [
+      "L’axe principal devient vertical",
+      "Les éléments disparaissent",
+      "Flexbox est désactivé",
+      "Les éléments deviennent inline"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Quelle propriété CSS permet de créer une animation fluide entre deux états ?",
+    "options": ["animation", "transform", "transition", "keyframes"],
+    "answer": 2
+  },
+  {
+    "question": "Quelle déclaration est correcte pour animer un changement de couleur sur 0.3 seconde ?",
+    "options": [
+      "transition: color 0.3s;",
+      "color: transition 0.3s;",
+      "animate: color 0.3s;",
+      "transition-duration: color;"
+    ],
+    "answer": 0
+  }
+]

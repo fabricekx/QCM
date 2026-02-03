@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   background: #f7f7f7;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
   height: 100vh;
@@ -44,17 +44,22 @@ button {
   background: #007BFF;
   color: white;
   cursor: pointer;
+  transition: all 200ms
 }
 
 
 
 button:hover {
   background: #0056b3;
+  transform: scale(1.05);
+  color: rgb(92, 22, 22)
 }
+
+
 
 #time {
   display: none;
-  margin: auto;
+  /* margin: auto; */
   padding: 10px 20px;
   font-size: 16px;
   border: none;
@@ -79,6 +84,6 @@ select {
     transform: translateX(0);
   }
   to {
-    transform: translateX(30px); /* décale de 30px vers la droite */
+    transform: translateX(30px) scale(1.1); /* décale de 30px vers la droite */
   }
 }
